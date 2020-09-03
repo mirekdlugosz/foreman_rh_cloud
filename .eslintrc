@@ -1,5 +1,8 @@
 {
-  "plugins": ["patternfly-react"],
+  "plugins": [
+    "patternfly-react",
+    "spellcheck"
+  ],
   "extends": ["plugin:patternfly-react/recommended"],
   "rules": {
     "prettier/prettier": ["error", {
@@ -11,6 +14,28 @@
     }],
     "import/extensions": ["error", {
       "ignore": ['foremanReact/.*']
+    }],
+    "spellcheck/spell-checker": ["error", {
+      "identifiers": false,
+      "ignoreRequire": true,
+      "skipWords": [
+        "ansible",
+        "donut",
+        "jed",
+        "katello",
+        "knowledgebase",
+        "noopener",
+        "noreferrer",
+        "nowrap",
+        "pid",
+        "redhat",
+        "repo",
+        "theforeman",
+        "tooltip",
+        "unmount",
+        "vh"
+      ],
+      "minLength": 3
     }]
   },
   "settings": {
